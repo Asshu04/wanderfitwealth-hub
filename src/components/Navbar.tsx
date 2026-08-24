@@ -30,10 +30,8 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "border-b border-border bg-background/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+        "sticky top-0 z-50 bg-background/90 backdrop-blur-md transition-all duration-300",
+        scrolled ? "border-b border-border" : "border-b border-transparent",
       )}
     >
       <nav aria-label="Primary" className="shell flex h-18 items-center justify-between gap-6">
