@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FitRouteImport } from './routes/fit'
+import { Route as WanderRouteImport } from './routes/wander'
+import { Route as WealthRouteImport } from './routes/wealth'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FitRoute = FitRouteImport.update({
+  id: '/fit',
+  path: '/fit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WanderRoute = WanderRouteImport.update({
+  id: '/wander',
+  path: '/wander',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WealthRoute = WealthRouteImport.update({
+  id: '/wealth',
+  path: '/wealth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/fit': typeof FitRoute
+  '/wander': typeof WanderRoute
+  '/wealth': typeof WealthRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/fit': typeof FitRoute
+  '/wander': typeof WanderRoute
+  '/wealth': typeof WealthRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/fit': typeof FitRoute
+  '/wander': typeof WanderRoute
+  '/wealth': typeof WealthRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/fit' | '/wander' | '/wealth'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/fit' | '/wander' | '/wealth'
+  id: '__root__' | '/' | '/fit' | '/wander' | '/wealth'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FitRoute: typeof FitRoute
+  WanderRoute: typeof WanderRoute
+  WealthRoute: typeof WealthRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fit': {
+      id: '/fit'
+      path: '/fit'
+      fullPath: '/fit'
+      preLoaderRoute: typeof FitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wander': {
+      id: '/wander'
+      path: '/wander'
+      fullPath: '/wander'
+      preLoaderRoute: typeof WanderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wealth': {
+      id: '/wealth'
+      path: '/wealth'
+      fullPath: '/wealth'
+      preLoaderRoute: typeof WealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FitRoute: FitRoute,
+  WanderRoute: WanderRoute,
+  WealthRoute: WealthRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
