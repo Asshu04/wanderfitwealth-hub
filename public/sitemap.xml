@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemap s.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://wanderfitwealth-hub.lovable.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/wander</loc><priority>0.9</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/fit</loc><priority>0.9</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/wealth</loc><priority>0.9</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/blog</loc><priority>0.8</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/about</loc><priority>0.7</priority></url>
+  <url><loc>https://wanderfitwealth-hub.lovable.app/contact</loc><priority>0.7</priority></url>
 </urlset>
