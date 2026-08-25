@@ -18,9 +18,9 @@ export const Route = createFileRoute("/wealth")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/wealth" },
+      { property: "og:url", content: "https://wanderfitwealth-hub.lovable.app/wealth" },
     ],
-    links: [{ rel: "canonical", href: "/wealth" }],
+    links: [{ rel: "canonical", href: "https://wanderfitwealth-hub.lovable.app/wealth" }],
   }),
   component: WealthPage,
 });

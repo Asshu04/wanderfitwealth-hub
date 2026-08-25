@@ -19,9 +19,9 @@ export const Route = createFileRoute("/fit")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/fit" },
+      { property: "og:url", content: "https://wanderfitwealth-hub.lovable.app/fit" },
     ],
-    links: [{ rel: "canonical", href: "/fit" }],
+    links: [{ rel: "canonical", href: "https://wanderfitwealth-hub.lovable.app/fit" }],
   }),
   component: FitPage,
 });

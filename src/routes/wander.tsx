@@ -19,9 +19,9 @@ export const Route = createFileRoute("/wander")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/wander" },
+      { property: "og:url", content: "https://wanderfitwealth-hub.lovable.app/wander" },
     ],
-    links: [{ rel: "canonical", href: "/wander" }],
+    links: [{ rel: "canonical", href: "https://wanderfitwealth-hub.lovable.app/wander" }],
   }),
   component: WanderPage,
 });

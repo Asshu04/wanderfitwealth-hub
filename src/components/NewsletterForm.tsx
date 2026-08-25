@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/Button";
+import { Button } from "./ActionButton";
 import { isValidEmail, subscribeToNewsletter } from "@/lib/subscribe";
 
 export function NewsletterForm({ className }: { className?: string }) {

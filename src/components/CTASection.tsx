@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { ButtonLink } from "./ui/Button";
+import { ButtonLink } from "./ActionButton";
 
 type CTASectionProps = {
   eyebrow?: string;

@@ -6,10 +6,11 @@ type RevealProps = {
   className?: string;
   delay?: number;
   as?: ElementType;
+  id?: string;
 };
 
 /** Lightweight scroll-reveal wrapper using a single IntersectionObserver per node. */
-export function Reveal({ children, className, delay = 0, as }: RevealProps) {
+export function Reveal({ children, className, delay = 0, as, id }: RevealProps) {
   const Tag = (as ?? "div") as ElementType;
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -38,6 +39,7 @@ export function Reveal({ children, className, delay = 0, as }: RevealProps) {
 
   return (
     <Tag
+      id={id}
       ref={ref}
       data-visible={visible ? "true" : "false"}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
