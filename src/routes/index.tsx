@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { PillarCard } from "@/components/cards/PillarCard";
 import { DestinationCard } from "@/components/cards/DestinationCard";
 import { BlogCard } from "@/components/cards/BlogCard";
-import { ButtonLink } from "@/components/ui/Button";
+import { ButtonLink } from "@/components/ActionButton";
 import { DESTINATIONS, PILLARS, POSTS, PROGRAMS, WEALTH_TOPICS } from "@/content/site";
 
 const TITLE = "WanderFitWealth — Explore. Evolve. Empower.";

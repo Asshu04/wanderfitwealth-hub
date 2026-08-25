@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero.jpg";
-import { ButtonLink } from "./ui/Button";
+import { ButtonLink } from "./ActionButton";
 
 const STATS = [
   { value: "Discover", label: "Wander — travel & nature" },

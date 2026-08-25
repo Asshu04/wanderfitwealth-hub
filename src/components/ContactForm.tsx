@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/Button";
+import { Button } from "./ActionButton";
 import { isValidEmail, sendContactMessage, type ContactPayload } from "@/lib/subscribe";
 
 type Errors = Partial<Record<keyof ContactPayload, string>>;

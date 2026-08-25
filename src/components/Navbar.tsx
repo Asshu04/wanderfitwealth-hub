@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { NAV_ITEMS, SITE } from "@/content/site";
 import { cn } from "@/lib/utils";
-import { ButtonLink } from "./ui/Button";
+import { ButtonLink } from "./ActionButton";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
