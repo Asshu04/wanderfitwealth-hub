@@ -39,6 +39,7 @@ export function Reveal({ children, className, delay = 0, as, id }: RevealProps) 
 
   return (
     <Tag
+      id={id}
       ref={ref}
       data-visible={visible ? "true" : "false"}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
