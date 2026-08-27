@@ -28,9 +28,10 @@ export function Navbar() {
   }, [open]);
 
   return (
+    <>
     <header
       className={cn(
-        "sticky top-0 z-50 bg-background/90 backdrop-blur-md transition-all duration-300",
+        "sticky top-0 z-50 bg-background/95 transition-all duration-300",
         scrolled ? "border-b border-border" : "border-b border-transparent",
       )}
     >
@@ -94,11 +95,12 @@ export function Navbar() {
           </span>
         </button>
       </nav>
+    </header>
 
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-0 top-18 z-40 bg-background px-5 pt-6 pb-10 lg:hidden"
+        className="fixed inset-x-0 top-18 bottom-0 z-40 overflow-y-auto bg-background px-5 pt-6 pb-10 lg:hidden"
       >
         <ul className="flex flex-col">
           {NAV_ITEMS.map((item) => (
@@ -118,6 +120,6 @@ export function Navbar() {
         </ButtonLink>
         <p className="mt-6 text-sm text-muted-foreground">{SITE.tagline}</p>
       </div>
-    </header>
+    </>
   );
 }
